@@ -1,0 +1,345 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.0rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 3rem;
+}
+
+@media(min-width: 800px)
+{
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.25rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+@font-face { 
+    font-family: 'title';
+    src:url(Fonts/conthrax-sb.ttf);
+}
+@font-face{
+    font-family: 'subtitle';
+    src:url(Fonts/Chapaza.ttf)
+}
+@font-face { 
+    font-family: 'paragraph';
+    src:url(Fonts/ufonts.com_gotham-extralight.ttf);
+}
+/* .intro img{
+    z-index:-1;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin: auto; */
+    /* top: 50px;
+    left: 550px;
+    position: absolute; 
+} */
+
+.intro img{
+    z-index:-1;
+    margin: 0;
+    position: absolute;
+    height: 100vmin;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.intro_title{
+    background: linear-gradient(
+        to right, 
+        #4862b4, 
+        #C83200
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display:block;
+    font-family: 'title';
+    font-size: 10vmin;
+    text-align: center;
+    color: white;
+    z-index: 0;
+}
+.about_me{
+    background-image: linear-gradient(#000112, 10%, rgb(48, 32, 92));
+    position: relative;
+    bottom: 20vh;
+    margin: 0;
+    max-height: 100%;
+}
+.intro_subtitle{
+    background: linear-gradient(
+        to right, 
+        rgb(252, 252, 252), 
+        rgb(114, 118, 121)
+    );
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent;  */
+    text-shadow: 2px 2px 2px #CE5937;
+    display:block;
+    font-family: 'paragraph';
+    font-size: 8vmin;
+    text-align: center;
+    color: white;
+}
+.about_me_title{
+    text-shadow: 2px 2px 2px #CE5937;
+    margin-top: 60vh;
+    margin-left: 5vw;
+    display:block;
+    font-family: 'paragraph';
+    font-size: 8vmin;
+    text-align:left;
+    color: white;
+}
+.cls-1 {
+    opacity: 0.78;
+    position: relative;
+    z-index: 5;
+    fill:#CE5937;
+}
+.section_paragraph{
+    margin-left: 5vw;
+    display:block;
+    font-family:'paragraph';
+    font-size: 2.5vmin;
+    text-align:left;
+    color: white;
+    width: 80%;
+    /* line-height: 3vh; */
+}
+.selfie
+{
+    width: 15vw;
+    display:block;
+    margin-left: 8vw;
+    margin-bottom: 2vh;
+    border-radius: 20px;
+}
+.btn
+{
+    height:7rem;
+}
+.socials_text
+{
+    text-shadow: 2px 2px 2px #CE5937;
+    font-family:'paragraph';
+    font-size: 4.5em;
+    margin-top:2vh;
+} 
+.section_socials
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+    left: 65vw;
+    bottom: 50vh;
+    column-gap: 1vw;
+    row-gap: 4vh;
+}
+.linked_in_btn
+{
+    grid-row: 1;
+    grid-column: 1;
+    height:7vmin;
+}
+.linked_in_icon
+{
+    grid-row: 1;
+    grid-column: 1;
+    height:7vmin;
+}
+.git_hub_btn
+{
+    grid-column: 1;
+    grid-row: 2;
+    height:7vmin;
+}
+.git_hub_icon
+{
+    grid-column: 1;
+    grid-row: 2;
+    height:7vmin;
+}
+.gmail_btn
+{
+    grid-column: 1;
+    grid-row: 3;
+    height:7vmin;
+}
+.gmail_icon
+{
+    grid-column: 1;
+    grid-row: 3;
+    height: 7vmin;
+}
+.linked_in_text
+{
+    text-shadow: 2px 2px 2px #CE5937;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+}
+.git_hub_text
+{
+    text-shadow: 2px 2px 2px #CE5937;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-row: 2;
+    grid-column: 2;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+}
+.email_text
+{
+    text-shadow: 2px 2px 2px #CE5937;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-row: 3;
+    grid-column: 2;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+}
+.section_lang
+{
+    position: relative;
+    display: grid;
+    grid-template-rows: 7vmin, 7vmin, 7vmin, 9vmin;
+    grid-template-columns: 7vmin, 7vmin;
+    column-gap: 1vw;
+    row-gap: 4vh;
+    left: 30vw;
+    bottom: 68vh;
+}
+.c_icon
+{
+    height: 7vmin;
+    grid-column: 1;
+    grid-row: 1;
+}
+.c_text
+{
+    text-shadow: 2px 2px 2px #3792ce;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.cpp_icon
+{
+    height: 7vmin;
+    grid-column: 1;
+    grid-row: 2;
+}
+.cpp_text
+{
+    text-shadow: 2px 2px 2px #3792ce;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.py_icon
+{
+    height: 7vmin;
+    grid-column: 1;
+    grid-row: 3;
+}
+.py_text
+{
+    text-shadow: 2px 2px 2px #3792ce;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.java_icon
+{
+    width: 85%;
+    height: 9vmin;
+    grid-column: 1;
+    grid-row: 4;
+}
+.java_text
+{
+    text-shadow: 2px 2px 2px #3792CE;
+    font-family:'paragraph';
+    font-size: 4.5vmin; 
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.path1
+{
+    position: absolute;
+    bottom: 10vh;
+    right: 0vw;
+    z-index: 0;
+    fill: rgb(231, 109, 53);
+}
+.my_projects
+{
+    position: relative;
+    bottom: 35vh;
+    background-color: rgb(231, 109, 53);
+
+}
+/* @media only screen and (max-width: 900px)
+{
+    .about p 
+    {
+        font-size: 3vw;
+        padding: 10px;
+    }
+} */
+body{
+    background: linear-gradient(#000112 40%, #041b66 80%,#CE5937 );
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow-x: hidden; 
+    font-family: 'paragraph';
+    font-size:var(--fs-body);
+    color: white;
+}
+
