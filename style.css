@@ -52,10 +52,11 @@
     margin: 0;
     position: absolute;
     height: 100vmin;
+    width: 100vmin;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    /* /* -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50vh); 
 }
 .intro_title{
     background: linear-gradient(
@@ -131,6 +132,19 @@
 .btn
 {
     height:7rem;
+}
+.about_me button{
+    font-family: 'paragraph';
+    font-size: 2.5vmin;
+    background-color: #dcdde1;
+    color: rgb(48, 32, 92);
+    opacity: .7;
+    margin-left: 30vw;
+    position: relative;
+    left: 15vw;
+    bottom: 15vh;
+    padding: 2vh 2vw;
+    border-radius: 2vh;
 }
 .socials_text
 {
@@ -232,7 +246,7 @@
     row-gap: 4vh;
     column-gap: 2.5vw;
     bottom: 65vh;
-    left: 35vw;
+    right: 10vw;
 }
 .c_icon
 {
@@ -320,7 +334,6 @@
     position: relative;
     bottom: 35vh;
     background-color: rgb(231, 109, 53);
-
 }
 body{
     background: linear-gradient(#000112 40%, #041b66 80%,#CE5937 );
@@ -333,6 +346,10 @@ body{
     color: white;
 }
 @media only screen and (max-width: 900px) {
+    /* .intro img{
+        width: 100vw;
+        height: 50vh;
+    } */
     .selfie{
         width: 30vw;
         display:block;
@@ -351,23 +368,18 @@ body{
     .c_text, .cpp_text, .py_text, .java_text, .linked_in_text, .git_hub_text, .email_text{
         font-size: 3vmin;
     }
+    .section_socials{
+        bottom: 32vh;
+        left: 60vw;
+    }
     .section_lang{
         display:grid;
-        bottom: 25vh;
+        bottom: 20vh;
         left: 5vw;
     }
-/*   
-    #titleAsset {
-      width: 100vw;
-      z-index: 1;
+    .about_me button{
+        bottom: 0vh;
+        left: -10vw;
     }
-  
-    .asset-contain {
-      margin-bottom: auto;
-    }
-  
-    .landing {
-      min-height: auto;
-    } */
-  }
+}
 
