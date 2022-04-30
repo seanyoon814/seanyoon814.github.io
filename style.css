@@ -4,27 +4,8 @@
     box-sizing: border-box;
 }
 
-html,body { margin:0; padding: 0; }
+html,body {overflow-x: hidden; width: 100%;}
 
-#container {
-  max-width: 800px;
-  padding: 0;
-  margin: 0 auto;
-
-  /*for ilustration purposes*/
-  background-color: #f13700;
-}
-
-
-@media(min-width: 800px)
-{
-    :root{
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.25rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
-    }
-}
 @font-face { 
     font-family: 'title';
     src:url(Fonts/conthrax-sb.ttf);
@@ -365,10 +346,4 @@ body{
         bottom: 0vh;
         right: 10vmin;
     }
-}
-@media (max-width: 900px) {
-  #container {
-    padding: 0;
-    margin: 0;
-  }
 }
