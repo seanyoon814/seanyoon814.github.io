@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+html,body { margin:0; padding: 0; }
+
+#container {
+  max-width: 800px;
+  padding: 0;
+  margin: 0 auto;
+
+  /*for ilustration purposes*/
+  background-color: #f13700;
+}
+
 
 @media(min-width: 800px)
 {
@@ -355,4 +366,9 @@ body{
         right: 10vmin;
     }
 }
-
+@media (max-width: 900px) {
+  #container {
+    padding: 0;
+    margin: 0;
+  }
+}
