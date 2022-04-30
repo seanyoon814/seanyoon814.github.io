@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-:root{
-
-    --fw-reg: 300;
-    --fw-bold: 900;
-
-    --fs-h1: 3.5rem;
-    --fs-h2: 2.0rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 3rem;
-}
 
 @media(min-width: 800px)
 {
@@ -125,13 +115,9 @@
 {
     width: 15vw;
     display:block;
-    margin-left: 7vw;
-    margin-bottom: 2vh;
+    margin-left: 14vmin;
+    margin-bottom: 2vmin;
     border-radius: 20px;
-}
-.btn
-{
-    height:7rem;
 }
 .about_me button{
     font-family: 'paragraph';
@@ -150,53 +136,50 @@
 {
     text-shadow: 2px 2px 2px #CE5937;
     font-family:'paragraph';
-    font-size: 4.5em;
+    font-size: 4.5vmin;
     margin-top:2vh;
 } 
 .section_socials
 {
     display: inline-grid;
     position: relative;
+    grid-template-columns: 7vmin 10vmin;
+    grid-template-rows: 7vmin 7vmin 7vmin;
     left: 70vw;
     bottom: 60vh;
     column-gap: 1vw;
     row-gap: 4vh;
 }
-.linked_in_btn
+.section_lang
 {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 7vmin 10vmin;
+    grid-template-rows: 7vmin 7vmin 7vmin 9vmin;
+    row-gap: 4vh;
+    column-gap: 1vw;
+    bottom: 65vh;
+    right: 20vw;
+}
+.linked_in_btn, .linked_in_icon
+{
+    margin: 0;
+    padding: 0;
     grid-row: 1;
     grid-column: 1;
     height:7vmin;
 }
-.linked_in_icon
-{
-    grid-row: 1;
-    grid-column: 1;
-    height:7vmin;
-}
-.git_hub_btn
+.git_hub_btn, .git_hub_icon
 {
     grid-column: 1;
     grid-row: 2;
     height:7vmin;
 }
-.git_hub_icon
-{
-    grid-column: 1;
-    grid-row: 2;
-    height:7vmin;
-}
-.gmail_btn
+.gmail_btn, .gmail_icon
 {
     grid-column: 1;
     grid-row: 3;
     height:7vmin;
-}
-.gmail_icon
-{
-    grid-column: 1;
-    grid-row: 3;
-    height: 7vmin;
 }
 .linked_in_text
 {
@@ -205,7 +188,7 @@
     font-size: 4.5vmin; 
     grid-row: 1;
     grid-column: 2;
-    margin-top: 1vh;
+    margin-top: 1vmin;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -218,7 +201,7 @@
     font-size: 4.5vmin; 
     grid-row: 2;
     grid-column: 2;
-    margin-top: 1vh;
+    margin-top: 1vmin;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -231,22 +214,11 @@
     font-size: 4.5vmin; 
     grid-row: 3;
     grid-column: 2;
-    margin-top: 1vh;
+    margin-top: 1vmin;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     padding:0;
-}
-.section_lang
-{
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 7vmin 10vmin;
-    grid-template-rows: 7vmin 7vmin 7vmin 9vmin;
-    row-gap: 4vh;
-    column-gap: 2.5vw;
-    bottom: 65vh;
-    right: 10vw;
 }
 .c_icon
 {
@@ -337,10 +309,10 @@
 }
 body{
     background: linear-gradient(#000112 40%, #041b66 80%,#CE5937 );
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
     margin: 0;
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
     font-family: 'paragraph';
     font-size:var(--fs-body);
     color: white;
@@ -351,10 +323,10 @@ body{
         height: 50vh;
     } */
     .selfie{
-        width: 30vw;
+        width: 30vmin;
         display:block;
-        margin-left: 8vw;
-        margin-bottom: 2vh;
+        margin-left: 10vmin;
+        margin-bottom: 2vmin;
         border-radius: 20px;
     }
     .about_me_title {
@@ -369,17 +341,18 @@ body{
         font-size: 3vmin;
     }
     .section_socials{
-        bottom: 32vh;
-        left: 60vw;
+        display:grid;
+        bottom: 60vmin;
+        left: 60vmin;
     }
     .section_lang{
         display:grid;
-        bottom: 20vh;
-        left: 5vw;
+        bottom: 30vmin;
+        left: 10vmin;
     }
     .about_me button{
         bottom: 0vh;
-        left: -10vw;
+        right: 10vmin;
     }
 }
 
