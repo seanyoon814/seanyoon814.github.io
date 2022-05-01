@@ -302,11 +302,14 @@ html,body {overflow-x: hidden; width: 100%;}
 }
 .projects_title{
     text-shadow: 2px 2px 2px #4137ce;
-    font-family: 'title';
+    font-family: 'paragraph';
     font-size: 15vmin;
     color: white;
     display: inline-block;
     margin-left: 5vmin;
+    margin-top: -2vmin;
+    margin-bottom: -2vmin;
+    max-width: 50%;
 }
 .rbt_title{
     text-shadow: 2px 2px 2px #000112;
