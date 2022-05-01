@@ -12,12 +12,13 @@ html,body {overflow-x: hidden; width: 100%;}
 }
 @font-face{
     font-family: 'subtitle';
-    src:url(Fonts/Chapaza.ttf)
+    src:url(Fonts/Anton-Regular.ttf)
 }
 @font-face { 
     font-family: 'paragraph';
     src:url(Fonts/ufonts.com_gotham-extralight.ttf);
 }
+
 /* .intro img{
     z-index:-1;
     /* display: block;
@@ -50,7 +51,7 @@ html,body {overflow-x: hidden; width: 100%;}
     -webkit-text-fill-color: transparent;
     display:block;
     font-family: 'title';
-    font-size: 10vmin;
+    font-size: 15vmin;
     text-align: center;
     color: white;
     z-index: 0;
@@ -78,15 +79,14 @@ html,body {overflow-x: hidden; width: 100%;}
     color: white;
 }
 .about_me_title{
-    text-shadow: 2px 2px 2px #CE5937;
     margin-top: 60vh;
     margin-left: 5vw;
+    text-shadow: 2px 2px 2px #CE5937;
     display:block;
     font-family: 'paragraph';
     font-size: 8vmin;
-    text-align:left;
     color: white;
-}
+    text-align:left;}
 .cls-1 {
     opacity: 0.78;
     position: relative;
@@ -151,7 +151,7 @@ html,body {overflow-x: hidden; width: 100%;}
     row-gap: 4vh;
     column-gap: 1vw;
     bottom: 65vh;
-    right: 20vw;
+    right: 10vw;
 }
 .linked_in_btn, .linked_in_icon
 {
@@ -295,9 +295,66 @@ html,body {overflow-x: hidden; width: 100%;}
 }
 .my_projects
 {
+    background: linear-gradient(rgb(231, 109, 53) , #c83200);
     position: relative;
-    bottom: 35vh;
-    background-color: rgb(231, 109, 53);
+    display: block;
+    bottom: 30vmin;
+}
+.projects_title{
+    text-shadow: 2px 2px 2px #4137ce;
+    font-family: 'title';
+    font-size: 15vmin;
+    color: white;
+    display: inline-block;
+    margin-left: 5vmin;
+}
+.rbt_title{
+    text-shadow: 2px 2px 2px #000112;
+    font-family: 'subtitle';
+    font-size: 10vmin;
+    color: white;
+    display: inline-block;
+    margin-left: 5vmin;
+    transform: translate(2.5VMIN, 8vmin);
+}
+.rbt_subtitle{
+    font-family: 'paragraph';
+    font-size: 4vmin;
+    color: white;
+    display: block;
+    margin-left: 5vmin;
+    transform: translate(2.5VMIN, -6vmin);
+}
+.rbt_paragraph{
+    font-family: 'paragraph';
+    font-size: 2.5vmin;
+    color: white;
+    margin-bottom: 1vh;
+    width: 30%;
+    margin-left: 5vmin;
+    display: block;
+    transform: translate(2.5VMIN, -6vmin);
+}
+.rbt_photo{
+    background-color: rgb(48, 32, 92);
+    position: relative;
+    display: block;
+    width: 60%;
+    left: 75vmin;
+    bottom: 50vmin;
+}
+.section_rbt button{
+    font-family: 'paragraph';
+    font-size: 2.5vmin;
+    background-color: #dcdde1;
+    color: rgb(231, 109, 53);
+    opacity: .7;
+    position: relative;
+    padding: 2vh 2vw;
+    border-radius: 2vh;
+    left: 10vmin;
+    top: 5vmin;
+    margin-right: 3vmin;
 }
 body{
     background: linear-gradient(#000112 40%, #041b66 80%,#CE5937 );
@@ -339,11 +396,14 @@ body{
     }
     .section_lang{
         display:grid;
-        bottom: 30vmin;
+        bottom: 40vmin;
         left: 10vmin;
     }
     .about_me button{
         bottom: 0vh;
         right: 10vmin;
+    }
+    .my_projects{
+        bottom: 30vmax;
     }
 }
