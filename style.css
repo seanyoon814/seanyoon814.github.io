@@ -369,7 +369,7 @@ body{
     font-size:var(--fs-body);
     color: white;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1300px) {
     /* .intro img{
         width: 100vw;
         height: 50vh;
@@ -394,12 +394,12 @@ body{
     }
     .section_socials{
         display:grid;
-        bottom: 60vmin;
+        bottom: 60vw;
         left: 60vmin;
     }
     .section_lang{
         display:grid;
-        bottom: 40vmin;
+        bottom: 40vw;
         left: 10vmin;
     }
     .about_me button{
@@ -408,5 +408,14 @@ body{
     }
     .my_projects{
         bottom: 30vmax;
+    }
+    .rbt_photo{
+        bottom:38vmin;
+        left: 42.5vmin;
+        width: 50vmin;
+    }
+    .section_rbt button{
+        left: 30vmin;
+        top: 0vmin;
     }
 }
