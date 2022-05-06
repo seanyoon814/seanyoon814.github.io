@@ -1,2 +1,2 @@
 # seanyoon814.github.io
-Personal Portfolioa
+Personal Portfolio. WIP.
