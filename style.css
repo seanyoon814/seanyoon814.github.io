@@ -100,8 +100,6 @@ canvas{
 }
 #socials_text{
     max-width: fit-content;
-    text-align: left;
-    float:left;
 }
 @keyframes language_icons{
     0%{
