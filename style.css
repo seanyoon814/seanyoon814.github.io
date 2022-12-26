@@ -24,11 +24,11 @@ canvas{
 }
 #center_title ul li{
     list-style: none;
-    padding-left: 0.5em;
+    margin-left: 0.5em;
     animation: light 2.6s linear infinite;
 }
 #center_title ul li:first-child{
-    padding-left: 0%; 
+    margin-left: 0%; 
 }
 
 #center_title ul li:nth-child(1){
