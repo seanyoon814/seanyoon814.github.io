@@ -105,3 +105,22 @@
         // call the next frame
         requestAnimationFrame(loop);
     }
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+            else{
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+    // Animations
+    
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const fadeRightElements = document.querySelectorAll('.fade-right');
+    hiddenElements.forEach((el) => observer.observe(el));
+    fadeInElements.forEach((el) => observer.observe(el));
+    fadeRightElements.forEach((el) => observer.observe(el));

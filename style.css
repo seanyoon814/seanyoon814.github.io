@@ -65,7 +65,7 @@ canvas{
     background:#313134;
     font-family: 'Barlow', sans-serif;
 }
-#about_me, #languages{
+#about_me, #languages, #projects{
     font-family: 'Barlow', sans-serif;
     color:white;
 }
@@ -99,9 +99,62 @@ canvas{
     animation: language_icons 3s linear infinite;
 }
 #socials_text{
+    color:white;
     max-width: fit-content;
     float:left;
 }
+#socials_text:hover {
+    text-shadow: 0px 0px 30px darkorange;
+  }
+.hidden{
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+.fade-in{
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1s;
+}
+.fade-right{
+    opacity: 0;
+    filter:blur(5px);
+    transform: translateX(10%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+#socials_animation:nth-child(1){
+    transition-delay: 200ms;
+}
+#socials_animation:nth-child(2){
+    transition-delay: 400ms;
+}
+#socials_animation:nth-child(3){
+    transition-delay: 600ms;
+}
+#socials_animation1:nth-child(1){
+    transition-delay: 800ms;
+}
+#socials_animation1:nth-child(2){
+    transition-delay: 1000ms;
+}
+#socials_animation1:nth-child(3){
+    transition-delay: 1200ms;
+}
+/* #socials_animation:nth-child(4){
+    transition-delay: 800ms;
+}
+#socials_animation:nth-child(5){
+    transition-delay: 1000ms;
+}
+#socials_animation:nth-child(6){
+    transition-delay: 1200ms;
+} */
 @keyframes language_icons{
     0%{
         text-shadow: 0px 0px 30px antiquewhite;
