@@ -9,29 +9,47 @@
     // set up the canvas and context
     var canvas = document.getElementById("cube")
     var ctx = canvas.getContext("2d");
-
     // dimensions
     var h = document.documentElement.clientHeight;
     var w = document.documentElement.clientWidth;
-    canvas.height = h/2;
-    canvas.width = w;
+    var cx;
+    var cy;
+    var cz;
+    var size;
+    if(window.innerWidth <= 544)
+    {
+        canvas.width = w;
+        canvas.height = h/2;
+        ctx.fillStyle = COLOR_BG;
+        ctx.strokeStyle = COLOR_CUBE;
+        ctx.lineWidth = w / 150;
+        cx = w / 2;
+        cy = h / 6;
+        cz = 0;
+        ctx.shadowBlur = 10;
+        size = h / 14;
+    }
+    else{
+        canvas.width = w;
+        canvas.height = h/2;
+        ctx.fillStyle = COLOR_BG;
+        ctx.strokeStyle = COLOR_CUBE;
+        ctx.lineWidth = w / 150;
+        cx = w / 4;
+        cy = h / 4;
+        cz = 0;
+        ctx.shadowBlur = 40;
+        size = h / 8;
+    }
 
     // colours and lines
-    ctx.fillStyle = COLOR_BG;
-    ctx.strokeStyle = COLOR_CUBE;
     // ctx.strokeStyle = "#1e4f9e"
     ctx.shadowColor = 'orange';
-    ctx.shadowBlur = 40;
     ctx.shadowOffsetX = 0;
     ctx.shadowOffsetY = 0;
-    ctx.lineWidth = w / 150;
     ctx.lineCap = "round";
 
     // cube parameters
-    var cx = w / 4;
-    var cy = h / 4;
-    var cz = 0;
-    var size = h / 8;
     var vertices = [
         new POINT3D(cx - size, cy - size, cz - size),
         new POINT3D(cx + size, cy - size, cz - size),
@@ -117,7 +135,7 @@
         })
     })
     // Animations
-    
+
     const hiddenElements = document.querySelectorAll('.hidden');
     const fadeInElements = document.querySelectorAll('.fade-in');
     const fadeRightElements = document.querySelectorAll('.fade-right');
