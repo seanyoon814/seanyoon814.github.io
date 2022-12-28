@@ -24,10 +24,10 @@
         ctx.strokeStyle = COLOR_CUBE;
         ctx.lineWidth = w / 150;
         cx = w / 2;
-        cy = h / 6;
+        cy = h / 8;
         cz = 0;
         ctx.shadowBlur = 10;
-        size = h / 14;
+        size = h / 20;
     }
     else{
         canvas.width = w;
