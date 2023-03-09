@@ -24,7 +24,7 @@
         ctx.strokeStyle = COLOR_CUBE;
         ctx.lineWidth = w / 150;
         cx = w / 2;
-        cy = h / 8;
+        cy = h / 12;
         cz = 0;
         ctx.shadowBlur = 10;
         size = h / 20;
