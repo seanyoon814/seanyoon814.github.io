@@ -35,13 +35,12 @@ strong{
 }
 a{
     position: relative;
-    /* background-color: transparent !important; */
+    background-color: transparent !important;
 }
 .container-fluid {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .row {
     text-align: center;
