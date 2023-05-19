@@ -97,11 +97,13 @@ li{
     z-index: 100;
     position: absolute;
     right:2rem;
-    height: 0;
+    height: 1px;
     top:80px;
     width:300px;
     background:rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter:blur(5px) !important;
+    backdrop-filter:blur(5px) !important;
+    bottom: 1px;
     border-radius: 10px;
     overflow:hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
