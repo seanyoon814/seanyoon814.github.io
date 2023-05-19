@@ -65,7 +65,7 @@ li{
     color:white !important;
 }
 .navbar .links a:hover,
-.dropdown_menu a:hover{
+.dropdown_menu a:not(.action_btn):hover{
     color: #1cb4b9 !important;
 }
 .navbar .toggle_btn{
@@ -337,7 +337,7 @@ a{
 }
 #socials_text::before,
 .navbar .links a::before,
-.dropdown_menu a::before{
+.dropdown_menu a:not(.action_btn)::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -352,7 +352,7 @@ a{
 }
 #socials_text:hover::before,
 .navbar .links a:hover::before,
-.dropdown_menu a:hover::before {
+.dropdown_menu a:not(.action_btn):hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
