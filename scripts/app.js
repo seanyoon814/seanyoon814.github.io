@@ -18,6 +18,19 @@ fadeInElements.forEach((el) => observer.observe(el));
 fadeRightElements.forEach((el) => observer.observe(el));
 fadeLeftElements.forEach((el) => observer.observe(el));
 
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function(){
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+}
+
 window.onload = function() {
     // Scroll to top when page is loaded
     window.scrollTo(0, 0);

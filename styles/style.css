@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Bebas+Neue&display=swap');
 *{
-    background-color: #201D1D;
     box-sizing: border-box;
-}
-html, body{
     margin: 0; padding: 0;
+}
+html, body, .container-fluid{
+    background: #201D1D;
     max-width: 100%;
     overflow-x: hidden;
     font-size: 20px;
-    /* background-color: #201D1D; */
+    background-color: #201D1D;
 }
 .btn-primary{
     background-color: #313134 !important;
@@ -22,20 +22,136 @@ html, body{
 .row{
     margin-left:0 !important;
     margin-right:0 !important;
+    background: #201D1D;
 }
 p{
     margin-bottom: 0 !important;
     font-family: 'Barlow', sans-serif;
     color:white;
     text-align: left;
-    /* background-color: transparent; */
 }
 strong{
     background-color: transparent !important;
 }
+header{
+    background: rgba(153, 236, 239, 0.2);
+    position:fixed;
+    width:100%;
+    padding: 0 2rem;
+    z-index:100;
+}
+li{
+    list-style:none;
+}
+.navbar{
+    width:100%;
+    height:60px;
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.navbar .links {
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    display:flex;
+    gap:2rem;
+    color:white !important;
+}
+.navbar .links a:hover{
+    color: #1cb4b9 !important;
+}
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor:pointer;
+    display:none;
+}
+.action_btn{
+    background-color:#1cb4b9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor:pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+.dropdown_menu{
+    z-index: 100;
+    position: absolute;
+    right:2rem;
+    height: 0;
+    top:80px;
+    width:300px;
+    background:rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 10px;
+    overflow:hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu.action_btn{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+@media(max-width: 992px)
+{
+    .navbar .links,
+    .navbar .action_btn{
+        display:none;
+    }
+
+    .navbar .toggle_btn{
+        display:block;
+    }
+
+    .dropdown_menu{
+        display:block;
+    }
+}
+
+@media (max-width:576px)
+{
+    .dropdown_menu{
+        left: 2rem;
+        width:unset;
+    }
+}
+#header_bg{
+    color:white;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+}
+
 a{
     position: relative;
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
 }
 .container-fluid {
     display: flex;
@@ -218,7 +334,8 @@ a{
     color:#99ecef;
     text-decoration: none;
 }
-#socials_text::before{
+#socials_text::before,
+.navbar .links a::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -231,7 +348,8 @@ a{
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
 }
-#socials_text:hover::before {
+#socials_text:hover::before,
+.navbar .links a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
@@ -252,22 +370,6 @@ a{
 #language_text{
     color:#ff89d1;
 }
-/* #language_text::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #9a1791;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-}
-#language_text:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-} */
 #sql
 {
     color:antiquewhite;
@@ -393,6 +495,7 @@ a{
     #socials_text{font-size:1rem;}
     #socials_text::before{top:1.5rem;}
     #sql{font-size:calc(1.625rem + 4.5vw); line-height:1.2;}
+
 }
 
 /* Large devices (desktops, 992px and up) */
