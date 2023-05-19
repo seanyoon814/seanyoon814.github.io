@@ -64,7 +64,8 @@ li{
     gap:2rem;
     color:white !important;
 }
-.navbar .links a:hover{
+.navbar .links a:hover,
+.dropdown_menu a:hover{
     color: #1cb4b9 !important;
 }
 .navbar .toggle_btn{
@@ -335,7 +336,8 @@ a{
     text-decoration: none;
 }
 #socials_text::before,
-.navbar .links a::before{
+.navbar .links a::before,
+.dropdown_menu a::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -349,7 +351,8 @@ a{
     transition: transform .3s ease-in-out;
 }
 #socials_text:hover::before,
-.navbar .links a:hover::before {
+.navbar .links a:hover::before,
+.dropdown_menu a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
